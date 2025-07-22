@@ -1,0 +1,110 @@
+{
+  "1": {
+    "name": "Sacred Agni",
+    "price": 44999,
+    "image_url": "../static/img/midtierticket.png",
+    "category": "Sacred",
+    "rating": 4.7,
+    "description": "Premium access zone with front-stage visuals, Agni qr, and exclusive drinks.",
+    "special": true
+  },
+  "2": {
+    "name": "Sacred Agni ++ (Only 6 left)",
+    "price": 53999,
+    "image_url": "../static/img/midtierticket.png",
+    "category": "Sacred",
+    "rating": 4.5,
+    "description": "SURPRISE AWAITS FOR THIS TICKET USER IN THE EVENT.",
+    "special": false
+  },
+  "3": {
+    "name": "Sacred Agni (Late Entry)",
+    "price": 49999,
+    "image_url": "../static/img/midtierticket.png",
+    "category": "Sacred",
+    "rating": 4.6,
+    "description": "Late access to Sacred zone with all standard tier benefits and post-entry privileges.",
+    "special": false
+  },
+  "4": {
+    "name": "Twilight Agni",
+    "price": 2999,
+    "image_url": "../static/img/ticketmockup.png",
+    "category": "Twilight",
+    "rating": 4.4,
+    "description": "General zone entry with great vibes and access to the main concert arena.",
+    "special": false
+  },
+  "5": {
+    "name": "Twilight Agni (Early Bird)",
+    "price": 2499,
+    "image_url": "../static/img/ticketmockup.png",
+    "category": "Twilight",
+    "rating": 4.3,
+    "description": "Limited-time discounted general pass. Same zone, lesser cost.",
+    "special": false
+  },
+  "6": {
+    "name": "Twilight Agni (After Hours)",
+    "price": 2999,
+    "image_url": "../static/img/ticketmockup.png",
+    "category": "Twilight",
+    "rating": 4.6,
+    "description": "Night-only Twilight access  perfect for the late-night rager.",
+    "special": false
+  },
+  "7": {
+    "name": "Cosmic Agni",
+    "price": 111111,
+    "image_url": "../static/img/necklacemockup.png",
+    "category": "Cosmic",
+    "rating": 4.7,
+    "description": "All-access Cosmic experience with lounge entry, backstage view, and necklace badge.",
+    "special": true
+  },
+  "8": {
+    "name": "Cosmic Agni Deluxe",
+    "price": 105999,
+    "image_url": "../static/img/necklacemockup.png",
+    "category": "Cosmic",
+    "rating": 4.8,
+    "description": "Includes all Cosmic benefits + AR ticket, merch kit, and limited-edition add-ons.",
+    "special": false
+  },
+  "9": {
+    "name": "Cosmic Agni Gold+",
+    "price": 110999,
+    "image_url": "../static/img/necklacemockup.png",
+    "category": "Cosmic",
+    "rating": 4.9,
+    "description": "Premium VIP treatment, collectibles, artist-signed digital pass and lounge priority.",
+    "special": false
+  },
+  "10": {
+    "name": "Feral Agni",
+    "price": 2999,
+    "image_url": "../static/img/wristbandmockup.png",
+    "category": "Feral",
+    "rating": 4.5,
+    "description": "Mid-tier zone closer to the stage, NFC wristband and crowd surge access.",
+    "special": false
+  },
+  "11": {
+    "name": "Feral Agni (Group Pack)",
+    "price": 9999,
+    "image_url": "../static/img/wristbandmockup.png",
+    "category": "Feral",
+    "rating": 4.4,
+    "description": "Bundle of 4 passes  rage with your full crew and get priority check-in.",
+    "special": true
+  },
+  "12": {
+    "name": "Feral Agni (Rage Tier)",
+    "price": 3499,
+    "image_url": "../static/img/wristbandmockup.png",
+    "category": "Feral",
+    "rating": 4.8,
+    "description": "Includes Feral zone + rage kit: bandana, glow wristband & artist hologram card.",
+    "special": true
+  }
+}

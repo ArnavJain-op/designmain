@@ -1,0 +1,143 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block extra_head %}
+<link href="https://fonts.googleapis.com/css2?family=Rubik+Distressed&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../static/css/index.css">
+{% endblock %}
+
+{% block content %}
+<style>
+.image-vignette {
+    background: radial-gradient(circle, transparent 70%, black 90%),
+                linear-gradient(to bottom, black , transparent 10%),
+                linear-gradient(to top, black , transparent 10%);
+    background-blend-mode: lighten;
+}
+</style>
+
+<main>
+
+<!-- Hero -->
+<div class="flex items-center justify-end h-[80vh] mt-8 relative" data-aos="fade-left" data-aos-duration="1200">
+    <div class="absolute left-0 top-1/2 transform -translate-y-1/2 z-20 px-8" data-aos="fade-right" data-aos-delay="300">
+        <span class="text-5xl text-left text-gray-300 shadow-xl pl-6" style="font-family: 'Rubik Distressed';">
+            LOST IN INDIA: <br> 
+           <div class="pl-6">FIND YOUR FIRE.</div> 
+        </span>
+    </div>
+    <div class="flex h-full w-full relative max-w-4/5 crt" data-aos="zoom-in" data-aos-delay="500">
+        <div class="absolute inset-0 z-10 image-vignette"></div>
+        <img src="../static/img/headertext.png" alt="" class="object-cover h-full w-full rounded-lg" style="filter: blur(0.5px);">
+    </div>
+</div>
+
+<!-- Fresh Forever / Lore Section -->
+<div class="flex items-center justify-center mt-16 mx-16" data-aos="fade-up" data-aos-duration="1000">
+    <div class="flex-1 burger flex items-center justify-center" data-aos="fade-right" data-aos-delay="200">
+        <img src="../static/img/poster2.png" alt="">
+    </div>
+
+    <div class="flex-1 text-center flex flex-col items-center justify-center" data-aos="fade-left" data-aos-delay="400">
+        <span class="text-5xl text-orange-400 font-bold tracking-[8px] italic font-[Integral] shadow-xl">
+            LOST IN INDIA
+        </span>
+        <p class="max-w-prose mt-4 text-gray-300 glitch-text">
+            This isn’t just a concert — it’s a convergence. <br>
+            A spiritual riot. A sonic pilgrimage. A Travis Scott experience reimagined under the Indian sky. 
+            Get ready for exclusive lineup drops, tiered tickets from Twilight to Cosmic, merch chaos, 
+            and energy that erupts beyond the front row. Are you ready to get lost?
+        </p>
+        <a href="{{url_for('origins')}}" class="mt-4 px-4 py-2 bg-orange-400 rounded-lg text-black hover:scale-102 hover:-translate-y-[1px] hover:translate-x-[1px]">
+            Explore Origins
+        </a>
+    </div>
+</div>
+
+<!-- Chef Special -> Featured Drop -->
+<div class="mx-16 mt-16 crt relative" data-aos="zoom-in-up" data-aos-duration="1200">
+    <div class="absolute inset-0 z-10" style="background: radial-gradient(circle, transparent 60%, black 90%);"></div>
+    <img src="../static/img/necklacemockup.png" alt="" class="object-cover max-w-[35vw] mix-blend-screen mx-auto rounded-[150px] image-vignette" style="filter: blur(0.5px);">
+    <span class="text-green-300 absolute left-1/2 top-1/2 transform -translate-y-[80%] translate-x-[80%] z-20 text-5xl text-left shadow-xl font-[Crostan-Bold]">
+        FEATURED <br>
+        DROP
+    </span>
+    <span class="text-gray-100 absolute left-1/2 top-1/2 transform -translate-y-[70%] -translate-x-[70%] z-20 text-8xl text-left shadow-xl tracking-[3px]" style="font-family: 'Helvetica Compressed';">
+        COSMIC <br>
+        Agni PASS
+    </span>
+    <span class="text-green-300 absolute left-1/2 top-1/2 transform translate-y-[20%] -translate-x-[110%] z-20 text-5xl text-right shadow-xl font-[Crostan-Bold]">
+        VIP ACCESS <br>
+        UNLOCKED
+    </span>
+    <div class="flex flex-col items-start gap-2 absolute left-1/2 top-1/2 transform translate-x-[40%] translate-y-[10%] z-20 text-l text-left shadow-xl max-w-[30ch] tracking-[2px]" style="font-family: 'Helvetica';">
+        <span class="pb-4">
+            Step into the highest tier. Cosmic Agni includes all-access zones, AR ticket drops, artist meet-ups, and a Travis-designed collectible necklace. It’s not just an entry — it’s an arrival.
+        </span>
+        <a href="{{url_for('menu')}}" class="px-4 py-2 bg-charcoal rounded-lg text-gray-300">
+            View Tickets
+        </a>
+    </div>
+</div>
+
+<!-- Reviews -->
+<div class="mt-16 flex flex-col items-center justify-center text-center" data-aos="fade-up" data-aos-duration="800">
+    <h2 class="text-4xl font-bold text-gray-200 mb-8 tracking-[2px]">
+        What Ragers Are Saying
+    </h2>
+    <div class="reviews-container" data-aos="fade-up" data-aos-delay="200">
+        <div class="absolute inset-0 pointer-events-none w-[100vw] z-[100]" style="background-image: linear-gradient(to right, black 0%, black 5%, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0) 90%, black 95%, black 100%);"></div>
+        <div class="wrapper">
+
+            <!-- Review 1: US Fan -->
+            <div class="bg-orange-600 rounded-lg p-8 max-w-[100ch] shadow-lg flex-shrink-0">
+                <p class="text-xl text-green-300 italic">
+                    "Astroworld was wild. But this tour? It’s a whole different frequency."
+                </p>
+                <div class="mt-4 flex items-center justify-center gap-4">
+                    
+                    <div>
+                        <span class="block text-lg font-bold text-green-300">Jordan M</span>
+                        <span class="block text-sm text-green-400">Los Angeles, USA</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Review 2: UK Fan -->
+            <div class="bg-orange-600 rounded-lg p-8 max-w-[100ch] shadow-lg flex-shrink-0">
+                <p class="text-xl text-green-300 italic">
+                    "I’ve seen Travis live 4 times — but the visuals and sound on this tour? Insane."
+                </p>
+                <div class="mt-4 flex items-center justify-center gap-4">
+                    
+                    <div>
+                        <span class="block text-lg font-bold text-green-300">Tasha W</span>
+                        <span class="block text-sm text-green-400">London, UK</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Review 3: European Fan -->
+            <div class="bg-orange-600 rounded-lg p-8 max-w-[100ch] shadow-lg flex-shrink-0">
+                <p class="text-xl text-green-300 italic">
+                    "Paris. Fire. Berlin. Fire. Lost in India? This might be the most epic one yet."
+                </p>
+                <div class="mt-4 flex items-center justify-center gap-4">
+                    
+                    <div>
+                        <span class="block text-lg font-bold text-green-300">Luca F</span>
+                        <span class="block text-sm text-green-400">Paris, France</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+</main>
+<script src="../static/js/index.js"></script>
+{% endblock %}

@@ -1,0 +1,197 @@
+{% extends "base.html" %}
+
+{% block title %}Menu{% endblock %}
+
+{% block extra_head %}
+<script src="../static/js/menu.js"></script>
+{% endblock %}
+
+
+{% block content %}
+<style>
+    .image-vignette {
+        background: radial-gradient(circle, transparent 50%, black 95%),
+            linear-gradient(to bottom, black, transparent 10%),
+            linear-gradient(to top, black, transparent 10%);
+        background-blend-mode: lighten;
+    }
+
+    .food-vignette {
+        background: radial-gradient(circle, transparent 50%, black 95%);
+        background-blend-mode: lighten;
+    }
+
+    .active {
+        border : 2px solid #fefefe; 
+        transform: scale(1.1);
+        transition: transform 0.3s ease-in-out;
+    }
+</style>
+
+
+
+
+
+<main>
+    <div class="flex items-center justify-center mx-20 my-12 h-[80vh]" data-aos="fade-up">
+        <div class="w-[33.33%] aspect-[] overflow-hidden relative" data-aos="fade-right" data-aos-delay="200">
+
+            <!-- Slides container -->
+            <div class="absolute inset-0 image-vignette"></div>
+            <div id="carousel" class="flex transition-transform duration-500 h-full" style="transform: translateX(0%)">
+                <img src="../static/img/theagnixtravis.png" class="w-full h-full object-cover object-center" alt="Slide 1" data-aos="zoom-in" data-aos-delay="400">
+                <img src="../static/img/theagnixtravis2.png" class="w-full h-full object-cover object-center" alt="Slide 2" data-aos="zoom-in" data-aos-delay="600">
+                <img src="../static/img/poster2.png" class="w-full h-full object-cover object-center" alt="Slide 3" data-aos="zoom-in" data-aos-delay="800">
+            </div>
+          
+            <!-- Arrows -->
+            <button id="prev" class="absolute left-0 top-1/2 -translate-y-1/2 bg-black/40 text-white px-3 py-1 rounded-r hover:bg-black/60 z-10" data-aos="fade-right" data-aos-delay="500">
+              &#10094;
+            </button>
+            <button id="next" class="absolute right-0 top-1/2 -translate-y-1/2 bg-black/40 text-white px-3 py-1 rounded-l hover:bg-black/60 z-10" data-aos="fade-left" data-aos-delay="500">
+              &#10095;
+            </button>
+          
+            <!-- Dots -->
+            <div class="absolute bottom-3 w-full flex justify-center space-x-2" data-aos="fade-up" data-aos-delay="900">
+              <button class="dot w-3 h-3 bg-white rounded-full opacity-50 hover:opacity-100" data-index="0"></button>
+              <button class="dot w-3 h-3 bg-white rounded-full opacity-50 hover:opacity-100" data-index="1"></button>
+              <button class="dot w-3 h-3 bg-white rounded-full opacity-50 hover:opacity-100" data-index="2"></button>
+            </div>
+          </div>
+         <div class="flex-1 flex flex-col justify-center items-center text-center"
+     data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
+  <h1 class="text-4xl font-bold mb-4 uppercase" style="font-family: 'Helvetica';"
+      data-aos="zoom-in" data-aos-delay="200">
+      Tickets
+  </h1>
+  <p class="text-lg mb-4 text-gray-300 italic text-light-green"
+     data-aos="fade-up" data-aos-delay="400">
+      Dive into the chaos. Choose your vibe. Enter the Agni.
+  </p>
+  <p class="text-base text-gray-400 max-w-xl"
+     data-aos="fade-up" data-aos-delay="600">
+      Whether you're rising with the <span class="text-orange-400 font-semibold">Sacred Agni</span>, raging with the <span class="text-pink-400 font-semibold">Feral Crew</span>,
+      ascending to <span class="text-purple-400 font-semibold">Cosmic Agni</span> or chasing the mysterious <span class="text-yellow-300 font-semibold">Golden Drop</span> — each tier brings a deeper connection to the flame.
+  </p>
+</div>
+
+     
+    </div>
+
+
+    <div class="flex flex-wrap justify-center gap-4 mb-8" data-aos="fade-up" data-aos-delay="200">
+        <button data-category="all" onclick="filterCategory('all')" class="px-4 py-2 bg-lemon-yellow text-charcoal font-bold rounded hover:bg-yellow-400 active">All</button>
+        <button data-category="specials" onclick="filterCategory('specials')" class="px-4 py-2 bg-lemon-yellow text-charcoal font-bold rounded hover:bg-yellow-400">Specials</button>
+        {% for category in categories %}
+            <button data-category="{{ category }}" onclick="filterCategory('{{ category }}')" class="px-4 py-2 bg-lemon-yellow text-charcoal font-bold rounded hover:bg-yellow-400">
+                {{ category.capitalize() }}
+            </button>
+        {% endfor %}
+    </div>
+    
+
+    <div class="flex flex-col items-center justify-center mx-20 my-12" data-aos="fade-up">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {% for item in food_items %}
+            <div class="min-h-[500px] bg-black/40 flex flex-col border border-lemon-yellow rounded-lg p-4 shadow-lg hover:scale-105 transition-transform duration-300 ease-in-out {{ item.category }} {% if item.special %}specials{% endif %}" data-aos="zoom-in" data-aos-delay="{{ loop.index * 100 }}">
+                <div class="w-full aspect-square overflow-hidden rounded-t-lg mb-4 relative flex-2" data-aos="fade-up" data-aos-delay="{{ loop.index * 100 + 50 }}">
+                    <div class="absolute inset-0 food-vignette"></div>
+                    <img src="{{ item.image_url }}" alt="{{ item.name }}" class="w-full h-full object-cover">
+                </div>
+                <div class="flex flex-col justify-between h-full flex-1">
+                    <div>
+                        <h3 class="text-xl font-semibold text-light-green mb-3">{{ item.name }}</h3>
+                        <p class="text-gray-300 ">{{ item.description }}</p>
+                    </div>
+                    <div class="flex items-center justify-between mt-4">
+                        <div class="flex flex-col items-start justify-between mt-2">
+                            <p class="text-lg font-bold text-light-green">₹{{ item.price }}</p>
+                            <span class="text-sm">
+                                {{ item.rating }} <ion-icon name="star" class="text-yellow-400"></ion-icon>
+                            </span>
+                        </div>
+                        <!-- Add to Cart / Quantity Buttons -->
+                        <div class="flex items-center justify-center mt-6">
+                            <div id="controls-{{ item.id }}">
+                                <button onclick="addFood({{ item.id }})"
+                                    class="bg-lemon-yellow hover:bg-yellow-400 text-charcoal font-bold py-2 px-4 rounded">
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</main>
+
+
+
+
+<!-- Scripts to handle Add/Remove -->
+<script>
+    let foodCart = {{ session.get('cart', {}).get('food_cart', {}) | tojson }};
+
+    function updateControls(itemId) {
+        const container = document.getElementById(`controls-${itemId}`);
+        const quantity = foodCart[itemId] || 0;
+
+        if (quantity === 0) {
+            container.innerHTML = `
+                <button onclick="addFood(${itemId})"
+                    class="bg-lemon-yellow hover:bg-yellow-400 text-black font-bold py-2 px-4 rounded">
+                    Add to Cart
+                </button>
+            `;
+        } else {
+            container.innerHTML = `
+                <div class="flex items-center space-x-2">
+                    <button onclick="removeFood(${itemId})"
+                        class="hover:scale-105 text-white font-bold py-1 px-3 rounded-full text-lg">
+                        <ion-icon name="remove"></ion-icon>                       
+                        
+                    </button>
+                    <span class="text-white font-bold">${quantity}</span>
+                    <button onclick="addFood(${itemId})"
+                        class="hover:scale-105 text-white font-bold py-1 px-3 rounded-full text-lg">
+                      <ion-icon name="add"></ion-icon>                       
+                        
+                    </button>
+                </div>
+            `;
+        }
+    }
+
+    function addFood(itemId) {
+        fetch(`/food/add/${itemId}`, {
+            method: 'POST'
+        })
+        .then(response => response.json())
+        .then(data => {
+            foodCart = data.food_cart;
+            updateControls(itemId);
+        });
+    }
+
+    function removeFood(itemId) {
+        fetch(`/food/remove/${itemId}`, {
+            method: 'POST'
+        })
+        .then(response => response.json())
+        .then(data => {
+            foodCart = data.food_cart;
+            updateControls(itemId);
+        });
+    }
+
+    // Initialize all controls on page load
+    document.addEventListener('DOMContentLoaded', function() {
+        for (const itemId of Object.keys(foodCart)) {
+            updateControls(itemId);
+        }
+    });
+</script>
+{% endblock %}

@@ -1,0 +1,13 @@
+{
+    "1": {
+      "name": "Travis x India Hoodie",
+      "image_url": "../static/img/cloth1.png",
+      "price": 3999
+    },
+    "2": {
+      "name": "Travis x Lost In India T-Shirt",
+      "image_url": "../static/img/cloth2.png",
+      "price": 2499
+    }
+}
+  

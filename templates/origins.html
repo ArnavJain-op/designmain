@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+
+{% block title %}Origins{% endblock %}
+
+{% block content %}
+<style>
+.text-gradient {
+    background: linear-gradient(to right, #ff7300, #ffffff, #000000);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+</style>
+
+<main class="flex flex-col gap-8 mt-16 mx-12 items-center text-gray-300">
+
+  <!-- Travis Story Section -->
+  <section class="flex gap-4 w-full justify-between items-start max-w-[80rem] flex-col md:flex-row">
+    <div class="flex items-center" data-aos="fade-up-right">
+      <h1 class="font-black text-7xl text-gradient">            
+        From Houston to Hindustan
+      </h1>
+      <ion-icon name="arrow-forward-outline" class="text-7xl mt-2 text-orange-500"></ion-icon>
+    </div>
+
+    <div class="w-full md:w-3/5 text-lg mt-4" data-aos="fade-up-left">
+      <p class="font-semibold mb-4 text-orange-400">
+        What began in Houston with bass drops and flame shows is now crossing borders.
+      </p>
+      <p>
+        Travis Scott’s universe of sound and surrealism has redefined live music. Now, "The Agni" brings that world to India — infused with mandalas, fire, and cultural chaos. This isn’t just a concert. It’s a **collision of worlds.**
+      </p>
+    </div>
+  </section>
+
+  <!-- Mission Section -->
+  <section class="flex gap-4 mt-16 w-full justify-between items-start max-w-[80rem] flex-col md:flex-row-reverse">
+    <div class="flex items-center gap-4" data-aos="fade-down-right" data-aos-delay="300">
+      <ion-icon name="flame-outline" class="text-8xl text-orange-500"></ion-icon>
+      <h1 class="font-black text-7xl text-gradient">
+        The Vision
+      </h1>
+    </div>
+
+    <div class="w-full md:w-3/5 text-lg mt-4" data-aos="fade-down-left" data-aos-delay="300">
+      <p class="font-semibold mb-4">
+        Lost in India isn’t about bringing Travis to India — it's about **making India a part of his world**. We're crafting an immersive experience inspired by Holi, Aghoris, neon mandalas, and surreal energy.
+      </p>
+      <p>
+        With fire, music, and chaos, “The Agni” sets a new standard for concerts in India. Welcome to a stage where **tradition burns into transformation**.
+      </p>
+    </div>
+  </section>
+
+  <!-- Philosophy Section -->
+  <section class="w-full px-4 py-16 bg-black flex flex-col items-center md:flex-row max-w-[80rem] mx-auto gap-12 md:gap-20 mt-12">
+    <div class="flex flex-col items-start md:w-2/5" data-aos="flip-up" data-aos-delay="500">
+      <h2 class="text-7xl font-extrabold text-gradient">
+        The Agni Philosophy
+        <ion-icon name="bonfire-outline" class="text-6xl text-orange-400 mt-2"></ion-icon>
+      </h2>
+    </div>
+
+    <div class="md:w-3/5 text-lg space-y-6" data-aos="flip-down" data-aos-delay="500">
+      <p class="font-semibold mb-4 text-orange-200">
+        Our mission is to fuse **Indian energy with Travis’ visionary chaos.** We don’t want audiences — we want believers.
+      </p>
+      <p>
+        Expect unexpected surprises — from surprise Indian acts to glitch visuals and cultural mashups. This is not a tour. This is **Travis Scott: reborn through fire.**
+      </p>
+      <p class="italic text-orange-300">
+        “The Agni” will leave scars — musical, visual, emotional.
+      </p>
+    </div>
+  </section>
+
+  <!-- Core Team (Organizers, Crew, etc.) -->
+
+
+  <!-- Stats Section -->
+ <section class="flex flex-col gap-24 items-center max-w-[80rem] mb-32 text-[#fdfcf7]">
+  <h1 class="font-black text-7xl bg-gradient-to-r from-orange-300 to-orange-600 text-transparent bg-clip-text" data-aos="fade-down-right" data-aos-duration="300">
+    Campaign Stats
+  </h1>
+
+  <div class="flex flex-col md:flex-row gap-8 pt-24 justify-between border-t-8 border-blue-500 rounded-lg items-center" data-aos="fade-down-left" data-aos-duration="300">
+    <h1 class="font-extrabold text-7xl text-orange-400">20M+</h1>
+    <p class="w-3/5 text-orange-400">Digital impressions expected across India from Travis Scott’s teaser drop and promotional visuals under the “Lost in India” campaign.</p>
+  </div>
+
+  <div class="flex flex-col md:flex-row gap-8 pt-24 justify-between border-t-8 border-blue-500 rounded-lg items-center" data-aos="fade-down-right" data-aos-duration="300">
+    <h1 class="font-extrabold text-7xl text-white">3-City Tour</h1>
+    <p class="w-3/5">“The Agni” will ignite Delhi, Mumbai, and Bengaluru — with Travis performing exclusive sets inspired by each city's unique cultural beat.</p>
+  </div>
+
+  <div class="flex flex-col md:flex-row gap-8 pt-24 justify-between border-t-8 border-blue-500 rounded-lg items-center" data-aos="fade-down-left" data-aos-duration="300">
+    <h1 class="font-extrabold text-7xl text-green-400">1st-Ever Fusion Set</h1>
+    <p class="w-3/5 text-green-400">Travis will debut a never-before-seen India-exclusive **fusion set** — blending Desi instruments, visuals, and surprise Indian artists on stage.</p>
+  </div>
+</section>
+
+</main>
+{% endblock %}

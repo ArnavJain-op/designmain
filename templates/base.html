@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <script src="../static/js/script.js"></script>
+
+    <!-- Additional libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="../static/fonts/helvetica.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- #favicon -->
+    <link rel="icon" type="image/png" href="../static/img/agnicomplogo.png">
+
+
+    <script>
+      tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    'charcoal': '#23465a',
+                    'dark-green': '#174618',
+                    'light-green': '#a7cdbd',
+                    'lemon-yellow': '#c0b56a',
+
+                }
+              }
+            }
+          }
+    </script>
+
+    <!-- Allow child templates to add extra head content -->
+    {% block extra_head %}
+    {% endblock %}
+
+    <title>
+        {% block title %}
+        {% endblock %}
+    </title>
+</head>
+<body class="bg-black text-gray-300 font-sans overflow-x-hidden" style="font-family: 'Helvetica';">
+
+    <header class="w-screen text-l glow flex items-center justify-between bg-transparent mt-4 block px-16">
+      <a href="{{url_for('home')}}" class="flex items-center justify-center">
+        <img src="../static/img/agnicomplogo.png" alt="Logo" class="w-32 h-32 rounded-full hover:scale-105 transition-transform duration-100 ease-in-out">
+      </a>
+     <nav class="max-w-4xl border border-light-green border-[1px] rounded-xl overflow-hidden backdrop-blur-[10px] bg-black/40 nav">
+  <ul class="flex justify-around p-4 border-b border-light-green text-light-green">
+    <li><a href="{{url_for('home')}}" class="px-8 py-2 block glow-orange">HOME</a></li>
+    <li><a href="{{url_for('menu')}}" class="px-8 py-2 block glow-orange">TICKETS</a></li>
+    <li><a href="{{url_for('lineup')}}" class="px-8 py-2 block glow-white">LINEUP</a></li>
+    <li><a href="{{url_for('merch')}}" class="px-8 py-2 block glow-green">MERCH</a></li>
+    <li><a href="{{url_for('origins')}}" class="px-8 py-2 block glow-green">ORIGINS</a></li>
+  </ul>
+</nav>
+
+      <a href = "{{url_for('cart')}}" class="hover:scale-105 w-32 h-32 flex items-center justify-center"><ion-icon name="cart-outline" class="text-5xl"></ion-icon> </a>
+    </header>
+
+    <header class="w-full text-l glow flex items-center justify-between nav-hidden fixed bg-transparent px-16">
+        <div class="w-32 "></div>
+          <nav class="max-w-4xl border border-light-green border-[1px] rounded-xl overflow-hidden backdrop-blur-[10px] bg-black/40 nav">
+  <ul class="flex justify-around p-4 border-b border-light-green text-light-green">
+    <li><a href="{{url_for('home')}}" class="px-8 py-2 block glow-orange">HOME</a></li>
+    <li><a href="{{url_for('menu')}}" class="px-8 py-2 block glow-orange">TICKETS</a></li>
+    <li><a href="{{url_for('lineup')}}" class="px-8 py-2 block glow-white">LINEUP</a></li>
+    <li><a href="{{url_for('merch')}}" class="px-8 py-2 block glow-green">MERCH</a></li>
+    <li><a href="{{url_for('origins')}}" class="px-8 py-2 block glow-green">ORIGINS</a></li>
+  </ul>
+</nav>
+        <a href="{{url_for('cart')}}" class="hover:scale-105 w-32 flex items-center justify-center">
+            <ion-icon name="cart-outline" class="text-5xl"></ion-icon>
+        </a>
+    </header>
+
+    <div id="main-content">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    <!-- Footer -->
+<footer class="bg-black text-white text-xs py-6 px-4 flex flex-col items-center space-y-4">
+  <div class="flex gap-6">
+    <a href="{{url_for('home')}}" class="glitch-hover">Home</a>
+    <a href="{{url_for('menu')}}" class="glitch-hover">Tickets</a>
+        <a href="{{url_for('lineup')}}" class="glitch-hover">Lineup</a>
+    <a href="{{url_for('merch')}}" class="glitch-hover">Merch</a>
+      <a href="{{url_for('origins')}}" class="glitch-hover">Origins</a>
+  </div>
+  <div class="opacity-40 text-[10px] tracking-widest">
+      © 2025 The Agni. Sing like it's the end of the world™.
+  </div>
+</footer>
+
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

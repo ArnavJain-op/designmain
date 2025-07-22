@@ -1,0 +1,129 @@
+{% extends "base.html" %}
+
+{% block title %}Lineup{% endblock %}
+
+{% block content %}
+<main class="flex flex-col gap-16 mt-16 mx-12 items-center text-gray-300">
+  <!-- Heading -->
+  <section class="w-full max-w-[80rem] text-center" data-aos="fade-down">
+    <h1 class="text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-white to-black">
+      The Agni Lineup
+    </h1>
+    <p class="mt-4 text-xl text-gray-400">
+      Where sonic storms meet ancient rhythm. Dive into Travis Scott's surreal universe colliding with India's musical legacy.
+    </p>
+  </section>
+
+  <!-- Travis Scott Headliner -->
+  <section class="w-full max-w-[80rem] bg-black border border-orange-500 rounded-xl p-8 flex flex-col md:flex-row items-center gap-8 shadow-xl" data-aos="fade-up">
+    <img src="../static/img/travis.jpeg" alt="Travis Scott" class="w-48 h-48 object-cover rounded-full border-4 border-orange-500">
+    <div class="text-center md:text-left">
+      <h2 class="text-4xl font-extrabold text-orange-400">Travis Scott</h2>
+      <p class="mt-2 text-gray-300">
+        The flame that lit Astroworld is now igniting Agni. Expect mandala visuals, raga-infused autotune, and an immersive sonic trip unlike anything India’s ever seen.<br>
+        <span class="text-sm text-orange-300">Instagram: <a href="https://instagram.com/travisscott" target="_blank">@travisscott</a></span>
+      </p>
+    </div>
+  </section>
+
+  <!-- National & International Artists -->
+  <section class="w-full max-w-[80rem] grid grid-cols-1 md:grid-cols-2 gap-8" data-aos="fade-up" data-aos-delay="200">
+    <!-- Taufiq Qureshi -->
+    <div class="bg-[#111] p-6 rounded-lg flex flex-col md:flex-row items-center gap-6 border border-orange-400">
+      <img src="../static/img/quareshi.jpeg" alt="Taufiq Qureshi" class="w-32 h-32 object-cover rounded-full border-2 border-orange-500">
+      <div>
+        <h3 class="text-2xl font-bold text-orange-300">Taufiq Qureshi</h3>
+        <p class="text-sm text-gray-400">India's rhythm wizard — tabla meets trap.<br>
+        Instagram: <a href="https://instagram.com/taufiqqureshiofficial" target="_blank">@taufiqqureshiofficial</a></p>
+      </div>
+    </div>
+
+    <!-- Tom Morello -->
+    <div class="bg-[#111] p-6 rounded-lg flex flex-col md:flex-row items-center gap-6 border border-orange-400">
+      <img src="../static/img/tom_main.jpeg" alt="Tom Morello" class="w-32 h-32 object-cover rounded-full border-2 border-orange-500">
+      <div>
+        <h3 class="text-2xl font-bold text-orange-300">Tom Morello</h3>
+        <p class="text-sm text-gray-400">Legendary guitarist, Rage Against The Machine.<br>
+        Instagram: <a href="https://instagram.com/tommorello" target="_blank">@tommorello</a></p>
+      </div>
+    </div>
+
+    <!-- Benny Dayal -->
+    <div class="bg-[#111] p-6 rounded-lg flex flex-col md:flex-row items-center gap-6 border border-orange-400">
+      <img src="../static/img/benny.jpeg" alt="Benny Dayal" class="w-32 h-32 object-cover rounded-full border-2 border-orange-500">
+      <div>
+        <h3 class="text-2xl font-bold text-orange-300">Benny Dayal</h3>
+        <p class="text-sm text-gray-400">Desi vocal king blending funk with Travis' fire.<br>
+        Instagram: <a href="https://instagram.com/bennydayalofficial" target="_blank">@bennydayalofficial</a></p>
+      </div>
+    </div>
+
+    <!-- Sheila E. -->
+    <div class="bg-[#111] p-6 rounded-lg flex flex-col md:flex-row items-center gap-6 border border-orange-400">
+      <img src="../static/img/E.jpeg" alt="Sheila E." class="w-32 h-32 object-cover rounded-full border-2 border-orange-500">
+      <div>
+        <h3 class="text-2xl font-bold text-orange-300">Sheila E.</h3>
+        <p class="text-sm text-gray-400">The Queen of Percussion. Prince's protégé now joining Cactus Jack’s chaos.<br>
+        Instagram: <a href="https://instagram.com/sheilaedrummer" target="_blank">@sheilaedrummer</a></p>
+      </div>
+    </div>
+
+    <!-- Ritviz -->
+    <div class="bg-[#111] p-6 rounded-lg flex flex-col md:flex-row items-center gap-6 border border-orange-400">
+      <img src="../static/img/her_fav.jpeg" alt="Ritviz" class="w-32 h-32 object-cover rounded-full border-2 border-orange-500">
+      <div>
+        <h3 class="text-2xl font-bold text-orange-300">Ritviz</h3>
+        <p class="text-sm text-gray-400">India’s synth-pop sensation — his drops meet Travis’ rage.<br>
+        Instagram: <a href="https://instagram.com/ritviz" target="_blank">@ritviz</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mystery Artists -->
+  <section class="w-full max-w-[80rem] grid grid-cols-1 md:grid-cols-3 gap-8 mt-12" data-aos="fade-up" data-aos-delay="400">
+    <div class="bg-[#111] p-6 rounded-lg flex flex-col items-center text-center border border-gray-700">
+      <div class="w-32 h-32 bg-gray-800 rounded-full blur-sm"></div>
+      <h3 class="mt-4 text-xl font-semibold text-gray-400">?????</h3>
+      <p class="text-sm mt-2">Surprise Performer</p>
+    </div>
+
+    <div class="bg-[#111] p-6 rounded-lg flex flex-col items-center text-center border border-gray-700">
+      <div class="w-32 h-32 bg-gray-800 rounded-full blur-sm"></div>
+      <h3 class="mt-4 text-xl font-semibold text-gray-400">?????</h3>
+      <p class="text-sm mt-2">To Be Revealed</p>
+    </div>
+
+    <div class="bg-[#111] p-6 rounded-lg flex flex-col items-center text-center border border-gray-700">
+      <div class="w-32 h-32 bg-gray-800 rounded-full blur-sm"></div>
+      <h3 class="mt-4 text-xl font-semibold text-gray-400">?????</h3>
+      <p class="text-sm mt-2">Special Guest</p>
+    </div>
+  </section>
+
+  <!-- CTA for Followers -->
+  <section class="w-full max-w-[80rem] mt-16 text-center relative bg-gradient-to-br from-[#1f1f1f] to-black rounded-xl p-12 border border-orange-500 shadow-lg" data-aos="zoom-in" data-aos-delay="600">
+  <h2 class="text-4xl md:text-5xl font-extrabold text-orange-400 tracking-tight">
+    Wanna get in for FREE?
+  </h2>
+  <p class="mt-4 text-lg md:text-xl text-gray-300">
+    Follow every artist on Instagram and tag 3 friends in our pinned post.
+    You could win <span class="text-orange-300 font-bold">FERAL OR COSMIC passes</span> with early entry, meet & greets, and more!
+  </p>
+  <p class="mt-6 text-sm text-orange-200 italic">
+    Giveaways go live weekly on @theagnifest — don't miss out.
+  </p>
+  <div class="absolute top-4 right-6 animate-pulse">
+    <ion-icon name="ticket-outline" class="text-orange-500 text-4xl"></ion-icon>
+  </div>
+</section>
+
+
+  <!-- Final Surprise Note -->
+  <section class="w-full max-w-[80rem] mt-8 text-center border-t border-gray-700 pt-8" data-aos="fade-in" data-aos-delay="800">
+    <p class="italic text-lg text-gray-400">
+      PS: One of India’s top underground rap icons is joining Travis on stage.<br>
+      <span class="text-orange-400 font-bold">Who? Wait and watch.</span>
+    </p>
+  </section>
+</main>
+{% endblock %}
